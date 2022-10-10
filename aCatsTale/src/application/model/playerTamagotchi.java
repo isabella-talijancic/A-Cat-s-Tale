@@ -15,7 +15,7 @@ public class playerTamagotchi{
 		Scanner input = new Scanner(System.in);
 
 		System.out.println("A Cat's Tale - Test -");
-		// receives user input for the cat's name & color and print out all starting values.
+		// receive user input for the cat's name & color and print out all starting values.
 		System.out.println("Enter the name of your new kitten: ");
 		String catName = input.nextLine();
 		System.out.println("What color would you like " + catName + " to be?");
