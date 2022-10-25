@@ -1,15 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #f4f3e4;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
    <children>
-      <ImageView fx:id="bannerImageView" fitHeight="373.0" fitWidth="527.0" layoutX="24.0" layoutY="65.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bannerImageView" fitHeight="358.0" fitWidth="600.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="https://m.media-amazon.com/images/I/716hxgSNnuL.jpg" />
+            <Image url="@../../../images/cherryblossombackground.gif" />
+         </image></ImageView>
+      <Button fx:id="play" layoutX="268.0" layoutY="516.0" mnemonicParsing="false" onAction="#handle" prefHeight="28.0" prefWidth="64.0" style="-fx-background-color: #deacc4;" text="Play!">
+         <font>
+            <Font name="HP Simplified Jpan Light" size="14.0" />
+         </font>
+         <effect>
+            <Glow>
+               <input>
+                  <DropShadow />
+               </input>
+            </Glow>
+         </effect>
+      </Button>
+      <ImageView fx:id="logoImageView" fitHeight="43.0" fitWidth="376.0" layoutX="148.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/logo.png" />
          </image>
       </ImageView>
    </children>

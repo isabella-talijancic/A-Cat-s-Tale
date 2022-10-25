@@ -8,6 +8,16 @@ package application.model;
  * Fall 2022
  */
 
+
+//public Pet CreatePet(int petType, int gameType, String petName) {
+//    return switch (petType) {
+//        case 0 -> new Dog(gameType, petName);
+//        case 1 -> new Cat(gameType, petName);
+//        default -> new DefaultPet(gameType, petName);
+//    };
+//}
+
+
 public class Tamagotchi {
 
 	// set up all of tamagotchi's values
@@ -27,6 +37,8 @@ public class Tamagotchi {
 	hunger = 1;
 	sick = false;
 	}
+	
+	
 
 	// print out the tamagotchi's name, color, and starting values
 	public void displayCatStats() {
