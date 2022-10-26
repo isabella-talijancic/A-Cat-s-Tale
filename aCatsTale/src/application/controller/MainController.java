@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import application.Main;
 import application.model.Tamagotchi;
-import application.model.playerTamagotchi;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -26,14 +25,12 @@ public class MainController implements EventHandler<ActionEvent> {
 	
 	@FXML
 	Button play;
+	
 	@FXML
-    ImageView bannerImageView;
+    ImageView bannerImageView, logoImageView;
 	@FXML
-    Image bannerImage;
-	@FXML
-    ImageView logoImageView;
-	@FXML
-    Image logoImage;
+	
+    Image bannerImage, logoImage;
 	
 	@Override
 	public void handle(ActionEvent event) {

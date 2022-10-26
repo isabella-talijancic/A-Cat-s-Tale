@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 
 /**
@@ -23,6 +24,11 @@ public class Main extends Application {
 		try {
 			// give access to the other controllers to this primary stage!
 			stage = primaryStage;
+			primaryStage.setTitle("A Cat's Tale");
+			
+			// Icon to appear next to the primary stage title:
+            Image icon = new Image("images/cat1.png");
+            primaryStage.getIcons().add(icon);
 			
 			// Connect to the FXML (contains our layout) and load it in
 			FXMLLoader loader = new FXMLLoader();

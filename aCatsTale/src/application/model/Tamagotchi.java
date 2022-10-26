@@ -1,52 +1,37 @@
 package application.model;
 
 /**
- * Tmagotchi is a Java class.
+ * Tamagotchi is a Java class.
  * 
  * @author Isabella Talijancic (juu530)
  * UTSA CS 3443 - A Cat's Tale
  * Fall 2022
  */
 
-
-//public Pet CreatePet(int petType, int gameType, String petName) {
-//    return switch (petType) {
-//        case 0 -> new Dog(gameType, petName);
-//        case 1 -> new Cat(gameType, petName);
-//        default -> new DefaultPet(gameType, petName);
-//    };
-//}
-
-
 public class Tamagotchi {
 
 	// set up all of tamagotchi's values
-	String name;
-	String color;
-	int age;
-	int happiness;
-	int hunger;
-	boolean sick;
-
-	// create a new tamagotchi cat object
-	public Tamagotchi(String name, String color){
-	this.name = name;
-	this.color = color;
-	age = 0;
-	happiness = 1;
-	hunger = 1;
-	sick = false;
-	}
+	private String name;
+	private int age;
+	private int happiness;
+	private int hunger;
+	private boolean isSick;
 	
-	
-
-	// print out the tamagotchi's name, color, and starting values
-	public void displayCatStats() {
-	System.out.println("Tamogotchi's name: " + name);
-	System.out.println("Tamogotchi's color: " + color);
-	System.out.println("Tamogotchi's age: " + age);
-	System.out.println("Tamogotchi's happiness: " + happiness);
-	System.out.println("Tamogotchi's hunger: " + hunger);
+	/**
+	 * Class constructor for the Tamagotchi class to initialize a new Tamagotchi with a name, age, happiness, hunger, and isSick.
+	 * 
+	 * @param name
+	 * @param age
+	 * @param happiness
+	 * @param hunger
+	 * @param isSick
+	 */
+	public Tamagotchi(String name) {
+		this.name = name;
+		age= 0 ;
+		happiness = 1;
+		hunger = 1;
+		isSick = false;
 	}
 	
 	/**
@@ -55,7 +40,7 @@ public class Tamagotchi {
 	 * @return the name
 	 */
 	public String getName() {
-		return name;
+		return this.name;
 	}
 
 	/**
@@ -70,28 +55,10 @@ public class Tamagotchi {
 	/**
 	 *  getter method
 	 * 
-	 * @return the color
-	 */
-	public String getColor() {
-		return color;
-	}
-	
-	/**
-	 * setter method
-	 * 
-	 * @param color the color to set
-	 */
-	public void setColor(String newColor) {
-		this.color = newColor;
-	}
-	
-	/**
-	 *  getter method
-	 * 
 	 * @return the age
 	 */
 	public int getAge() {
-		return age;
+		return this.age;
 	}
 	
 	/**
@@ -109,7 +76,7 @@ public class Tamagotchi {
 	 * @return the happiness
 	 */
 	public int getHappiness() {
-		return happiness;
+		return this.happiness;
 	}
 	
 	/**
@@ -127,7 +94,7 @@ public class Tamagotchi {
 	 * @return the hunger
 	 */
 	public int getHunger() {
-		return hunger;
+		return this.hunger;
 	}
 	
 	/**
@@ -144,8 +111,8 @@ public class Tamagotchi {
 	 * 
 	 * @return the sick
 	 */
-	public boolean getSick() {
-		return sick;
+	public boolean getIsSick() {
+		return this.isSick;
 	}
 	
 	/**
@@ -153,7 +120,25 @@ public class Tamagotchi {
 	 * 
 	 * @param sick the sick to set
 	 */
-	public void setSick(boolean sickness) {
-		this.sick = sickness;
+	public void setIsSick(boolean isSick) {
+		this.isSick = isSick;
 	}
+	
+	/**
+	 * toString() method to represent any object as a string, in this case -- the cat's name, age, happiness, hunger, and whether or not sick. Does not take in parameters and returns given values in string format.
+	 * 
+	 * @return this.getName()
+	 * @return this.getAge()
+	 * @return this.getHappiness()
+	 * @return this.getHunger()
+	 * @return this.isSick()
+	 * 
+	 * in string format
+	 */
+	public String toString()
+	{
+		return "Name: " + this.getName() + "\nAge: " + this.getAge() + "\nHappiness: " + this.getHappiness() + "\nHunger: " + this.getHunger() + "\nSick: " + this.getIsSick();
+		
+	}
+	
 }

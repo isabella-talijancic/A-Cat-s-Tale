@@ -59,7 +59,7 @@
             <Image url="@../../../images/cat3.png" />
          </image>
       </ImageView>
-      <Button fx:id="cat3" layoutX="99.0" layoutY="437.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #8395b6;" text="Cooper (&quot;Coop&quot;)">
+      <Button fx:id="cat3" layoutX="126.0" layoutY="438.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #8395b6;" text="Cooper">
          <font>
             <Font name="Dubai Light" size="14.0" />
          </font>

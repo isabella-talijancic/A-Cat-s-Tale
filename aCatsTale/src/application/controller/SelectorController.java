@@ -3,6 +3,7 @@ package application.controller;
 import java.util.ArrayList;
 
 import application.Main;
+import application.model.Tamagotchi;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -26,37 +27,16 @@ import javafx.scene.image.ImageView;
 public class SelectorController implements EventHandler<ActionEvent> {
 	
 	@FXML
-	Button cat1;
+	Button cat1, cat2, cat3, cat4;
+	
 	@FXML
-	Button cat2;
+	Label textOutput, welcome;
+	
 	@FXML
-	Button cat3;
+    ImageView bannerImageView, catImageView1, catImageView2, catImageView3, catImageView4;
+	
 	@FXML
-	Button cat4;
-	@FXML
-	Label textOutput;
-	@FXML
-    ImageView bannerImageView;
-	@FXML
-    Image bannerImage;
-	@FXML
-    ImageView catImageView1;
-	@FXML
-    Image catImage1;
-	@FXML
-    ImageView catImageView2;
-	@FXML
-    Image catImage2;
-	@FXML
-    ImageView catImageView3;
-	@FXML
-    Image catImage3;
-	@FXML
-    ImageView catImageView4;
-	@FXML
-    Image catImage4;
-	@FXML
-	Label welcome;
+    Image bannerImage, catImage1, catImage2, catImage3, catImage4;
 	
 	String catChosen;
 	
@@ -74,12 +54,16 @@ public class SelectorController implements EventHandler<ActionEvent> {
 			//LUNA - START GAME
 			String catChosen = "Luna";
 			getCatChosen(catChosen);
+			
+			// Initialize a new Tamagotchi cat using its name.
+			Tamagotchi luna = new Tamagotchi( "Luna" );
+			System.out.println(luna);
+			
 			// move the user to the LivingRoom view
 			try {
 				Parent root = FXMLLoader.load(getClass().getResource("../view/LivingRoom.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
-				System.out.println(catChosen);
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
@@ -93,7 +77,6 @@ public class SelectorController implements EventHandler<ActionEvent> {
 				Parent root = FXMLLoader.load(getClass().getResource("../view/LivingRoom.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
-				System.out.println(catChosen);
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
@@ -107,7 +90,6 @@ public class SelectorController implements EventHandler<ActionEvent> {
 				Parent root = FXMLLoader.load(getClass().getResource("../view/LivingRoom.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
-				System.out.println(catChosen);
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
@@ -121,7 +103,6 @@ public class SelectorController implements EventHandler<ActionEvent> {
 				Parent root = FXMLLoader.load(getClass().getResource("../view/LivingRoom.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
-				System.out.println(catChosen);
 			}catch(Exception e) {
 				e.printStackTrace();
 			}

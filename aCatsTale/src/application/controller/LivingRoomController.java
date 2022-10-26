@@ -2,6 +2,7 @@ package application.controller;
 
 import application.Main;
 import application.controller.SelectorController;
+import application.model.Tamagotchi;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -25,68 +26,81 @@ import javafx.scene.image.ImageView;
 public class LivingRoomController implements EventHandler<ActionEvent> {
 	
 	@FXML
-	Button home;
-	@FXML
-	Button cat1;
-	@FXML
-	Button cat2;
-	@FXML
-	Button cat3;
-	@FXML
-	Button cat4;
-	@FXML
-	Label textOutput;
-	@FXML
-    ImageView bannerImageView;
-	@FXML
-    Image bannerImage;
-	@FXML
-    ImageView catImageView1;
-	@FXML
-    Image catImage1;
-	@FXML
-    ImageView catImageView2;
-	@FXML
-    Image catImage2;
-	@FXML
-    ImageView catImageView3;
-	@FXML
-    Image catImage3;
-	@FXML
-    ImageView catImageView4;
-	@FXML
-    Image catImage4;
-	@FXML
-	Label welcome;
+	Button home, cat1, cat2, cat3, cat4, moodButton, feedButton, bathroomButton, sleepButton, medicineButton, settingsButton;
 	
+	@FXML
+	Label textOutput, welcome;
+	
+	@FXML
+    ImageView bannerImageView, catImageView1, catImageView2, catImageView3, catImageView4, moodImageView, feedImageView, bathroomImageView, sleepImageView, medicineImageView, settingsImageView;
+	
+	@FXML
+    Image bannerImage, catImage1, catImage2, catImage3, catImage4, mood, feed, bathroom, sleep, medicine, settings;
+
 	String catChosen;
 	
 	@FXML
 	public void initialize() {
+		Image bannerImage = new Image("images/livingroombackground.gif");
+		bannerImageView.setImage(bannerImage);
 		
+		//check which cat was chosen
+		//set up button icons & start the game!
+		Image mood = new Image("images/status.png");
+		moodImageView.setImage(mood);
+		moodButton.setGraphic(moodImageView);
+		
+		Image feed = new Image("images/feed.png");
+		feedImageView.setImage(feed);
+		feedButton.setGraphic(feedImageView);
+		
+		Image bathroom = new Image("images/bathroom.png");
+		bathroomImageView.setImage(bathroom);
+		bathroomButton.setGraphic(bathroomImageView);
+		
+		Image sleep = new Image("images/sleep.png");
+		sleepImageView.setImage(sleep);
+		sleepButton.setGraphic(sleepImageView);
+		
+		Image medicine = new Image("images/medicine.png");
+		medicineImageView.setImage(medicine);
+		medicineButton.setGraphic(medicineImageView);
+		
+		Image settings = new Image("images/settings.png");
+		settingsImageView.setImage(settings);
+		settingsButton.setGraphic(settingsImageView);
 	}
 
 	@Override
 	public void handle(ActionEvent event) {
-		
-		Image bannerImage = new Image("images/livingroombackground.gif");
-		bannerImageView.setImage(bannerImage);
-		
 		//check which button was pressed...
 		Button sourceButton = (Button) event.getSource();
 		String buttonText = sourceButton.getText();
-				
-		if(buttonText!=null && buttonText.contains("Feed") ) {
+			
+		
+		if(sourceButton.getId().equals("moodButton")) {
+			//Happiness/mood
+			System.out.println("mood button!");
+		}
+		else if(sourceButton.getId().equals("feedButton") ) {
 			//Feed
+			System.out.println("feed button!");
 		}
-		else if(buttonText!=null && buttonText.contains("Clean") ) {
-			//Clean
+		else if(sourceButton.getId().equals("bathroomButton") ) {
+			//Clean/bathroom
+			System.out.println("bathroom button!");
 		}
-		else if(buttonText!=null && buttonText.contains("Sleep") ) {
+		else if(sourceButton.getId().equals("sleepButton") ) {
 			//Sleep
+			System.out.println("sleep button!");
 		}
-		else if(buttonText!=null && buttonText.contains("Settings") ) {
+		else if(sourceButton.getId().equals("medicineButton") ) {
+			//Medicine
+			System.out.println("medicine button!");
+		}
+		else if(sourceButton.getId().equals("settingsButton") ) {
 			//Settings
+			System.out.println("settings button!");
 		}
 		else if(buttonText!=null && buttonText.contains("Home") ) {
 			// move the user to the Main view
