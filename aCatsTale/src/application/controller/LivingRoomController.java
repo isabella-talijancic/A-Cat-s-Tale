@@ -23,7 +23,7 @@ import javafx.scene.image.ImageView;
  * Fall 2022
  */
 
-public class LivingRoomController implements EventHandler<ActionEvent> {
+public class LivingRoomController extends SelectorController {
 	
 	@FXML
 	Button home, cat1, cat2, cat3, cat4, moodButton, feedButton, bathroomButton, sleepButton, medicineButton, settingsButton;
@@ -41,10 +41,11 @@ public class LivingRoomController implements EventHandler<ActionEvent> {
 	
 	@FXML
 	public void initialize() {
-		Image bannerImage = new Image("images/livingroombackground.gif");
+		Image bannerImage = new Image("images/strawberryroom.png");
 		bannerImageView.setImage(bannerImage);
 		
 		//check which cat was chosen
+		
 		//set up button icons & start the game!
 		Image mood = new Image("images/status.png");
 		moodImageView.setImage(mood);

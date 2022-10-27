@@ -15,9 +15,9 @@
          <image>
             <Image url="@../../../images/livingroombackground.gif" />
          </image></ImageView>
-      <Button fx:id="cat1" layoutX="132.0" layoutY="217.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #8395b6;" text="Luna">
+      <Button fx:id="cat1" layoutX="127.0" layoutY="217.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #8395b6;" text="Luna">
          <font>
-            <Font name="Dubai Light" size="14.0" />
+            <Font name="HP Simplified Jpan Regular" size="14.0" />
          </font>
          <effect>
             <Glow>
@@ -27,9 +27,9 @@
             </Glow>
          </effect>
       </Button>
-      <Label fx:id="welcome" layoutX="171.0" layoutY="14.0" prefHeight="72.0" prefWidth="258.0" text="Pick your kitten!" textFill="WHITE">
+      <Label fx:id="welcome" layoutX="166.0" layoutY="23.0" prefHeight="72.0" prefWidth="267.0" text="Pick your kitten!" textFill="WHITE">
          <font>
-            <Font name="Dubai Light" size="40.0" />
+            <Font name="HP Simplified Jpan Regular" size="40.0" />
          </font>
       </Label>
       <ImageView fx:id="catImageView1" fitHeight="91.0" fitWidth="115.0" layoutX="98.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
@@ -42,9 +42,9 @@
             <Image url="@../../../images/cat2.png" />
          </image>
       </ImageView>
-      <Button fx:id="cat2" layoutX="416.0" layoutY="217.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #8395b6;" text="Maple">
+      <Button fx:id="cat2" layoutX="414.0" layoutY="217.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #8395b6;" text="Maple">
          <font>
-            <Font name="Dubai Light" size="14.0" />
+            <Font name="HP Simplified Jpan Regular" size="14.0" />
          </font>
          <effect>
             <Glow>
@@ -59,9 +59,9 @@
             <Image url="@../../../images/cat3.png" />
          </image>
       </ImageView>
-      <Button fx:id="cat3" layoutX="126.0" layoutY="438.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #8395b6;" text="Cooper">
+      <Button fx:id="cat3" layoutX="119.0" layoutY="438.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #8395b6;" text="Cooper">
          <font>
-            <Font name="Dubai Light" size="14.0" />
+            <Font name="HP Simplified Jpan Regular" size="14.0" />
          </font>
          <effect>
             <Glow>
@@ -76,9 +76,9 @@
             <Image url="@../../../images/cat4.png" />
          </image>
       </ImageView>
-      <Button fx:id="cat4" layoutX="415.0" layoutY="438.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #8395b6;" text="Ginger">
+      <Button fx:id="cat4" layoutX="411.0" layoutY="438.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #8395b6;" text="Ginger">
          <font>
-            <Font name="Dubai Light" size="14.0" />
+            <Font name="HP Simplified Jpan Regular" size="14.0" />
          </font>
          <effect>
             <Glow>

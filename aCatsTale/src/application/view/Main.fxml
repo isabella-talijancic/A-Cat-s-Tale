@@ -14,9 +14,9 @@
          <image>
             <Image url="@../../../images/cherryblossombackground.gif" />
          </image></ImageView>
-      <Button fx:id="play" layoutX="268.0" layoutY="516.0" mnemonicParsing="false" onAction="#handle" prefHeight="28.0" prefWidth="64.0" style="-fx-background-color: #deacc4;" text="Play!">
+      <Button fx:id="play" layoutX="275.0" layoutY="516.0" mnemonicParsing="false" onAction="#handle" prefHeight="28.0" prefWidth="50.0" style="-fx-background-color: #deacc4;" text="Play!" textAlignment="CENTER">
          <font>
-            <Font name="HP Simplified Jpan Light" size="14.0" />
+            <Font name="HP Simplified Jpan Regular" size="14.0" />
          </font>
          <effect>
             <Glow>

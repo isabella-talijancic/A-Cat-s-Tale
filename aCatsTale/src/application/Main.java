@@ -27,7 +27,8 @@ public class Main extends Application {
 			primaryStage.setTitle("A Cat's Tale");
 			
 			// Icon to appear next to the primary stage title:
-            Image icon = new Image("images/cat1.png");
+            Image icon = new Image("images/siticon.png");
+            //"C:\Users\bella\git\repository\aCatsTale\images\gameicon.png"
             primaryStage.getIcons().add(icon);
 			
 			// Connect to the FXML (contains our layout) and load it in
