@@ -24,7 +24,7 @@ import javafx.scene.image.ImageView;
 public class MainController implements EventHandler<ActionEvent> {
 	
 	@FXML
-	Button play;
+	Button playButton, rulesButton, settingsButton;
 	
 	@FXML
     ImageView bannerImageView, logoImageView;
@@ -55,10 +55,29 @@ public class MainController implements EventHandler<ActionEvent> {
 				e.printStackTrace();
 			}
 		}
+		else if(buttonText!=null && buttonText.contains("Rules") ) {
+			// move the user to the rules view
+			try {
+				Parent root = FXMLLoader.load(getClass().getResource("../view/Rules.fxml"));
+				Main.stage.setScene( new Scene(root, 600, 600) );
+				Main.stage.show();
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		else if(buttonText!=null && buttonText.contains("Settings") ) {
+			// move the user to the settings view
+			try {
+				Parent root = FXMLLoader.load(getClass().getResource("../view/Settings.fxml"));
+				Main.stage.setScene( new Scene(root, 600, 600) );
+				Main.stage.show();
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
 		else {
 			//else
 		}
-		
 	}
 
 }

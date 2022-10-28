@@ -124,6 +124,10 @@ public class Tamagotchi {
 		this.isSick = isSick;
 	}
 	
+//	public int getPassiveTime() {
+//		return this.passiveTime);
+//	}
+	
 	/**
 	 * toString() method to represent any object as a string, in this case -- the cat's name, age, happiness, hunger, and whether or not sick. Does not take in parameters and returns given values in string format.
 	 * 

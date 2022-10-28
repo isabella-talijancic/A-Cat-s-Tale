@@ -100,8 +100,14 @@ public class LivingRoomController extends SelectorController {
 			System.out.println("medicine button!");
 		}
 		else if(sourceButton.getId().equals("settingsButton") ) {
-			//Settings
-			System.out.println("settings button!");
+			// move the user to the settings view
+			try {
+				Parent root = FXMLLoader.load(getClass().getResource("../view/Settings.fxml"));
+				Main.stage.setScene( new Scene(root, 600, 600) );
+				Main.stage.show();
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
 		}
 		else if(buttonText!=null && buttonText.contains("Home") ) {
 			// move the user to the Main view
