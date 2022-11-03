@@ -39,7 +39,7 @@ public class RulesController implements EventHandler<ActionEvent>, Initializable
 	Button backButton;
 	
 	@FXML
-    ImageView bannerImageView;
+    ImageView bannerImageView, logoImageView;
 	
 	@FXML
 	Label rulesLabel;
@@ -76,10 +76,10 @@ public class RulesController implements EventHandler<ActionEvent>, Initializable
 		Button sourceButton = (Button) event.getSource();
 		String buttonText = sourceButton.getText();
 				
-		if(buttonText!=null && buttonText.contains("Go Back") ) {
+		if(buttonText!=null && buttonText.contains("Continue") ) {
 			// move the user back to the main view
 			try {
-				Parent root = FXMLLoader.load(getClass().getResource("../view/Main.fxml"));
+				Parent root = FXMLLoader.load(getClass().getResource("../view/Selector.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
 			}catch(Exception e) {

@@ -1,5 +1,7 @@
 package application.controller;
 
+import javafx.animation.Animation;
+import javafx.animation.Transition;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 
@@ -23,6 +25,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 /**
@@ -36,7 +39,7 @@ import javafx.util.Duration;
 public class MainController implements EventHandler<ActionEvent>, Initializable{
 	
 	@FXML
-	Button playButton, rulesButton, settingsButton;
+	Button playButton, exitButton;
 	
 	@FXML
     ImageView bannerImageView, logoImageView;
@@ -47,9 +50,14 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
 	@FXML
 	MediaPlayer mediaPlayer, mediaPlayerSFX;
 	
+	@FXML
+	Label namesLabel;
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		backgroundMusic();
+		animateText(namesLabel, "Made Possible by: Isabella Talijancic, Jake Alvarez,\n"
+				+ "Wendy Guzman-Castro, Robert Sepulveda, and Christine Park");
 		
 	}
 	
@@ -69,37 +77,33 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
 		if(buttonText!=null && buttonText.contains("Play!") ) {
 			// move the user to the selector view
 			try {
-				Parent root = FXMLLoader.load(getClass().getResource("../view/Selector.fxml"));
-				Main.stage.setScene( new Scene(root, 600, 600) );
-				Main.stage.show();
-				
-				mediaPlayer.stop();
-				
-			}catch(Exception e) {
-				e.printStackTrace();
-			}
-		}
-		else if(buttonText!=null && buttonText.contains("Rules") ) {
-			// move the user to the rules view
-			try {
 				Parent root = FXMLLoader.load(getClass().getResource("../view/Rules.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
 				
-				mediaPlayer.stop();
+				//mediaPlayer.stop();
 				
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
 		}
 		else if(buttonText!=null && buttonText.contains("Settings") ) {
+			mediaPlayer.stop();
 			// move the user to the settings view
 			try {
 				Parent root = FXMLLoader.load(getClass().getResource("../view/Settings.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
 				
-				mediaPlayer.stop();
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		else if(buttonText!=null && buttonText.contains("Exit") ) {
+			// exit the game
+			try {
+				Stage stage = (Stage) exitButton.getScene().getWindow();
+                stage.close();
 				
 			}catch(Exception e) {
 				e.printStackTrace();
@@ -129,5 +133,20 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
         mediaPlayer = new MediaPlayer(h);
         mediaPlayer.play();
     }
+	
+	public void animateText(Label lbl, String stringToType) {
+        String content = stringToType;
+        final Animation animation = new Transition() {
+            {
+                setCycleDuration(Duration.millis(8000));
+            }
 
+            protected void interpolate(double frac) {
+                final int length = content.length();
+                final int n = Math.round(length * (float) frac);
+                lbl.setText(content.substring(0, n));
+            }
+        };
+        animation.play();
+    }
 }

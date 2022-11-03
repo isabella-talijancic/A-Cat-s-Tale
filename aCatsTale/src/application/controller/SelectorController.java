@@ -76,7 +76,7 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 			
 			// move the user to the LivingRoom view
 			try {
-				Parent root = FXMLLoader.load(getClass().getResource("../view/LivingRoom.fxml"));
+				Parent root = FXMLLoader.load(getClass().getResource("../view/LoadPage.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
 			}catch(Exception e) {
@@ -89,7 +89,7 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 			getCatChosen(catChosen);
 			// move the user to the LivingRoom view
 			try {
-				Parent root = FXMLLoader.load(getClass().getResource("../view/LivingRoom.fxml"));
+				Parent root = FXMLLoader.load(getClass().getResource("../view/LoadPage.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
 			}catch(Exception e) {
@@ -102,7 +102,7 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 			getCatChosen(catChosen);
 			// move the user to the LivingRoom view
 			try {
-				Parent root = FXMLLoader.load(getClass().getResource("../view/LivingRoom.fxml"));
+				Parent root = FXMLLoader.load(getClass().getResource("../view/LoadPage.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
 			}catch(Exception e) {
@@ -115,7 +115,7 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 			getCatChosen(catChosen);
 			// move the user to the LivingRoom view
 			try {
-				Parent root = FXMLLoader.load(getClass().getResource("../view/LivingRoom.fxml"));
+				Parent root = FXMLLoader.load(getClass().getResource("../view/LoadPage.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
 			}catch(Exception e) {

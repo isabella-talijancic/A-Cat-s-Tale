@@ -15,7 +15,7 @@
          <image>
             <Image url="@../../images/greenroom.png" />
          </image></ImageView>
-      <Button fx:id="backButton" layoutX="267.0" layoutY="516.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" prefHeight="28.0" prefWidth="66.0" style="-fx-background-color: #deacc4;" text="Go Back" textAlignment="CENTER">
+      <Button fx:id="backButton" layoutX="264.0" layoutY="515.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" prefHeight="28.0" prefWidth="70.0" style="-fx-background-color: #deacc4;" text="Continue" textAlignment="CENTER">
          <font>
             <Font name="HP Simplified Jpan Regular" size="14.0" />
          </font>
@@ -27,11 +27,6 @@
             </Glow>
          </effect>
       </Button>
-      <ImageView fx:id="logoImageView" fitHeight="43.0" fitWidth="376.0" layoutX="148.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../../../images/logo.png" />
-         </image>
-      </ImageView>
       <Label fx:id="rulesLabel" alignment="CENTER" layoutX="46.0" layoutY="265.0" prefHeight="250.0" prefWidth="507.0" text="explanation of rules goes here!" textAlignment="JUSTIFY" textFill="#deacc4">
          <font>
             <Font name="HP Simplified Jpan Regular" size="15.0" />
@@ -40,5 +35,10 @@
             <DropShadow />
          </effect>
       </Label>
+      <ImageView fx:id="logoImageView" fitHeight="43.0" fitWidth="376.0" layoutX="112.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/gameoverview.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

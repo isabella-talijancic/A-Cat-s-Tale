@@ -35,7 +35,7 @@ public class SettingsController implements EventHandler<ActionEvent>, Initializa
 	Button backButton;
 	
 	@FXML
-    ImageView bannerImageView;
+    ImageView bannerImageView, logoImageView;
 	
 	@FXML
 	Label settingsLabel;
@@ -65,9 +65,10 @@ public class SettingsController implements EventHandler<ActionEvent>, Initializa
 		if(buttonText!=null && buttonText.contains("Go Back") ) {
 			// move the user back to the main view
 			try {
-				Parent root = FXMLLoader.load(getClass().getResource("../view/Main.fxml"));
+				Parent root = FXMLLoader.load(getClass().getResource("../view/LivingRoom.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
+				
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
