@@ -2,16 +2,28 @@ package application.controller;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+
+import java.io.File;
+import java.net.URL;
+import java.nio.file.Paths;
+import java.util.ResourceBundle;
+
 import application.Main;
 import application.model.Tamagotchi;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.scene.media.MediaView;
+import javafx.util.Duration;
 
 /**
  * MainController is a Java class that will need to implement the EventHandler interface,
@@ -21,16 +33,25 @@ import javafx.scene.image.ImageView;
  * UTSA CS 3443 - A Cat's Tale
  * Fall 2022
  */
-public class MainController implements EventHandler<ActionEvent> {
+public class MainController implements EventHandler<ActionEvent>, Initializable{
 	
 	@FXML
 	Button playButton, rulesButton, settingsButton;
 	
 	@FXML
     ImageView bannerImageView, logoImageView;
-	@FXML
 	
+	@FXML
     Image bannerImage, logoImage;
+	
+	@FXML
+	MediaPlayer mediaPlayer, mediaPlayerSFX;
+	
+	@Override
+	public void initialize(URL location, ResourceBundle resources) {
+		backgroundMusic();
+		
+	}
 	
 	@Override
 	public void handle(ActionEvent event) {
@@ -51,6 +72,9 @@ public class MainController implements EventHandler<ActionEvent> {
 				Parent root = FXMLLoader.load(getClass().getResource("../view/Selector.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
+				
+				mediaPlayer.stop();
+				
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
@@ -61,6 +85,9 @@ public class MainController implements EventHandler<ActionEvent> {
 				Parent root = FXMLLoader.load(getClass().getResource("../view/Rules.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
+				
+				mediaPlayer.stop();
+				
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
@@ -71,6 +98,9 @@ public class MainController implements EventHandler<ActionEvent> {
 				Parent root = FXMLLoader.load(getClass().getResource("../view/Settings.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
+				
+				mediaPlayer.stop();
+				
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
@@ -79,5 +109,25 @@ public class MainController implements EventHandler<ActionEvent> {
 			//else
 		}
 	}
+	
+	//Event listener to play a sound effect for when a user hovers over a button.
+    public void buttonHovered() {
+        playSound("cuteclick");
+    }
+	
+    //Creates a new Media object to play sound effects.
+    public void playSound(String soundName) {
+        String s = "src/application/sounds/" + soundName + ".mp3";
+        Media h = new Media(Paths.get(s).toUri().toString());
+        mediaPlayerSFX = new MediaPlayer(h);
+        mediaPlayerSFX.play();
+    }
+	
+	public void backgroundMusic() {
+        String s = "src/application/sounds/kawaii.mp3";
+        Media h = new Media(Paths.get(s).toUri().toString());
+        mediaPlayer = new MediaPlayer(h);
+        mediaPlayer.play();
+    }
 
 }

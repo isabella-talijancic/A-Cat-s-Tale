@@ -28,7 +28,7 @@
             <Image url="@../../images/cat3.png" />
          </image>
       </ImageView>
-      <Button fx:id="home" layoutX="530.0" layoutY="10.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: #7BA379;" text="Home">
+      <Button fx:id="home" layoutX="530.0" layoutY="10.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: #7BA379;" text="Home">
          <font>
             <Font name="HP Simplified Jpan Regular" size="14.0" />
          </font>
@@ -55,17 +55,17 @@
             <Image url="@../../images/cat2.png" />
          </image>
       </ImageView>
-      <Button fx:id="moodButton" layoutX="18.0" layoutY="537.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: white;" />
+      <Button fx:id="moodButton" layoutX="18.0" layoutY="537.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: white;" />
       <ImageView fx:id="moodImageView" fitHeight="40.0" fitWidth="40.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="feedImageView" fitHeight="40.0" fitWidth="40.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="feedButton" layoutX="119.0" layoutY="537.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: white;" />
+      <Button fx:id="feedButton" layoutX="119.0" layoutY="537.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: white;" />
       <ImageView fx:id="bathroomImageView" fitHeight="40.0" fitWidth="40.0" layoutX="20.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="bathroomButton" layoutX="224.0" layoutY="537.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: white;" />
-      <Button fx:id="sleepButton" layoutX="327.0" layoutY="537.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: white;" />
+      <Button fx:id="bathroomButton" layoutX="224.0" layoutY="537.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: white;" />
+      <Button fx:id="sleepButton" layoutX="327.0" layoutY="537.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: white;" />
       <ImageView fx:id="sleepImageView" fitHeight="40.0" fitWidth="40.0" layoutX="30.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="medicineButton" layoutX="425.0" layoutY="537.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: white;" />
+      <Button fx:id="medicineButton" layoutX="425.0" layoutY="537.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: white;" />
       <ImageView fx:id="medicineImageView" fitHeight="40.0" fitWidth="40.0" layoutX="40.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
-      <Button fx:id="settingsButton" layoutX="530.0" layoutY="537.0" mnemonicParsing="false" onAction="#handle" style="-fx-background-color: white;" />
+      <Button fx:id="settingsButton" layoutX="530.0" layoutY="537.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: white;" />
       <ImageView fx:id="settingsImageView" fitHeight="40.0" fitWidth="40.0" layoutX="50.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>
