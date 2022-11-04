@@ -19,6 +19,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
@@ -53,6 +54,13 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
 	@FXML
 	Label namesLabel;
 	
+	@FXML
+	Button volumeButton;
+	@FXML
+	Image maxImage;
+	@FXML
+	ImageView maxImageView;
+	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		backgroundMusic();
@@ -69,6 +77,12 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
 		
 		Image logoImage = new Image("images/logo.png");
 		logoImageView.setImage(logoImage);
+		
+		//image and view for volume button JA
+		Image maxImage = new Image("images/maxVolume.png");
+		ImageView maxImageView = new ImageView(maxImage);
+		//sets volume button graphic to the max as Default 
+		volumeButton.setGraphic(maxImageView);
 		
 		//check which button was pressed...
 		Button sourceButton = (Button) event.getSource();
@@ -149,4 +163,11 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
         };
         animation.play();
     }
+	
+	//Slider to lower Volume of background music 
+	public void setVolume(MediaPlayer mediaPlayer) {
+		
+		mediaPlayer.setVolume(0);
+	}
+	
 }
