@@ -60,9 +60,9 @@
          </effect>
       </Label>
      
-      <Button fx:id="volumeButton" layoutX="545.0" layoutY="14.0" mnemonicParsing="false" onAction="#handle" prefHeight="24.0" prefWidth="24.0">
+      <Button fx:id="volumeButton" contentDisplay="GRAPHIC_ONLY" layoutX="545.0" layoutY="14.0" mnemonicParsing="false" onAction="#volumeControl" prefHeight="24.0" prefWidth="24.0" text="Max" textAlignment="CENTER">
          <graphic>
-            <ImageView fx:id="maxImageView" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="volumeImageView" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../images/maxVolume.png" />
                </image>

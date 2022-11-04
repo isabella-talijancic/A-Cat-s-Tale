@@ -57,9 +57,9 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
 	@FXML
 	Button volumeButton;
 	@FXML
-	Image maxImage;
+	Image volumeImage;
 	@FXML
-	ImageView maxImageView;
+	ImageView volumeImageView;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -78,11 +78,6 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
 		Image logoImage = new Image("images/logo.png");
 		logoImageView.setImage(logoImage);
 		
-		//image and view for volume button JA
-		Image maxImage = new Image("images/maxVolume.png");
-		ImageView maxImageView = new ImageView(maxImage);
-		//sets volume button graphic to the max as Default 
-		volumeButton.setGraphic(maxImageView);
 		
 		//check which button was pressed...
 		Button sourceButton = (Button) event.getSource();
@@ -128,6 +123,70 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
 		}
 	}
 	
+	//Event Listener for Volume Control JA
+	public void volumeControl ( ActionEvent event) {
+		
+		
+		//Checks for the current state of the button JA
+		Button sourceButton = (Button) event.getSource();
+		
+		String buttonText = sourceButton.getText();
+		//change the url here for the max volume png JA
+		Image volumeImage = new Image("images/cat1.png");
+		
+		
+	
+		
+		volumeImageView.setImage(volumeImage);
+		
+	
+		
+		// Volume Level: Can only be 0.0-1.0 JA
+		double volumeLevel;
+		 
+		//IF statements check the text of the button then lower the volume to the next Level and loop back after Mute is reach to Max
+		if( buttonText!=null && buttonText.contains("Max")) {
+			volumeLevel = 0.5; 
+			sourceButton.setText("middle");
+			//change the url here for the middle volume png JA 
+			Image newImage = new Image("images/logo.png");
+			
+			volumeImageView.setImage(newImage);
+			
+			setVolume(mediaPlayer, volumeLevel);
+			
+		}else if (buttonText!=null && buttonText.contains("middle")) {
+			volumeLevel = 0.0;
+			sourceButton.setText("mute");
+			setVolume(mediaPlayer, volumeLevel);
+			
+			//change the url here for the mute volume png JA
+			Image newImage = new Image("images/feed.png");
+			
+			volumeImageView.setImage(newImage);
+			
+		}else if (buttonText!=null && buttonText.contains("mute")) { 
+			volumeLevel = 1.0;
+			sourceButton.setText("Max");
+			setVolume(mediaPlayer, volumeLevel);
+			
+			
+			volumeImageView.setImage(volumeImage);
+			
+		}
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		
+		
+	}
+	
 	//Event listener to play a sound effect for when a user hovers over a button.
     public void buttonHovered() {
         playSound("cuteclick");
@@ -165,9 +224,9 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
     }
 	
 	//Slider to lower Volume of background music 
-	public void setVolume(MediaPlayer mediaPlayer) {
+	public void setVolume(MediaPlayer mediaPlayer, double volumeLevel) {
 		
-		mediaPlayer.setVolume(0);
+		mediaPlayer.setVolume(volumeLevel);
 	}
 	
 }
