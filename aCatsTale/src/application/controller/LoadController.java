@@ -56,7 +56,7 @@ public class LoadController implements EventHandler<ActionEvent>, Initializable 
 	@Override
 	public void handle(ActionEvent event) {
 		
-		Image bannerImage = new Image("images/loadgif.gif");
+		Image bannerImage = new Image("file:src/application/images/loadgif.gif");
 		bannerImageView.setImage(bannerImage);
 		
 		//check which button was pressed...
@@ -72,9 +72,6 @@ public class LoadController implements EventHandler<ActionEvent>, Initializable 
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
-		}
-		else {
-			//else
 		}
 	}
 	

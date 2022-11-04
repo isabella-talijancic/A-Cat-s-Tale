@@ -13,7 +13,7 @@
    <children>
       <ImageView fx:id="bannerImageView" fitHeight="600.0" fitWidth="608.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/greenroom.png" />
+            <Image url="@../images/greenroom.png" />
          </image></ImageView>
       <Button fx:id="backButton" layoutX="264.0" layoutY="515.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" prefHeight="28.0" prefWidth="70.0" style="-fx-background-color: #deacc4;" text="Continue" textAlignment="CENTER">
          <font>
@@ -37,7 +37,7 @@
       </Label>
       <ImageView fx:id="logoImageView" fitHeight="43.0" fitWidth="376.0" layoutX="112.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/gameoverview.png" />
+            <Image url="@../images/gameoverview.png" />
          </image>
       </ImageView>
    </children>

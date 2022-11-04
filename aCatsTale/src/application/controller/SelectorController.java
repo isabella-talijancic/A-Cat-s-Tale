@@ -58,7 +58,7 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 	@Override
 	public void handle(ActionEvent event) {
 		
-		Image bannerImage = new Image("images/livingroombackground.gif");
+		Image bannerImage = new Image("file:src/application/images/livingroombackground.gif");
 		bannerImageView.setImage(bannerImage);
 		
 		//check which button was pressed...

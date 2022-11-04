@@ -17,8 +17,6 @@ import javafx.scene.image.Image;
 
 public class Main extends Application {
 	
-	int mike = 0;
-	
 	public static Stage stage;
 	
 	@Override
@@ -29,7 +27,7 @@ public class Main extends Application {
 			primaryStage.setTitle("A Cat's Tale");
 			
 			// Icon to appear next to the primary stage title:
-            Image icon = new Image("images/siticon.png");
+            Image icon = new Image("file:src/application/images/siticon.png");
             //"C:\Users\bella\git\repository\aCatsTale\images\gameicon.png"
             primaryStage.getIcons().add(icon);
 			

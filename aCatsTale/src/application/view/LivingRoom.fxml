@@ -13,7 +13,7 @@
    <children>
       <ImageView fx:id="bannerImageView" fitHeight="682.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../images/strawberryroom.png" />
+            <Image url="@../images/strawberryroom.png" />
          </image></ImageView>
       <Label fx:id="welcome" layoutX="98.0" layoutY="28.0" prefHeight="72.0" prefWidth="403.0" text="Take care of your kitten!">
          <font>

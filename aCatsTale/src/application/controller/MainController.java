@@ -34,6 +34,7 @@ import javafx.util.Duration;
  * and handle any events that occur when the user interacts with Main.fxml. 
  * 
  * @author Isabella Talijancic (juu530)
+ * @author Jake Alvarez
  * UTSA CS 3443 - A Cat's Tale
  * Fall 2022
  */
@@ -72,10 +73,10 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
 	@Override
 	public void handle(ActionEvent event) {
 		
-		Image bannerImage = new Image("images/cherryblossombackground.gif");
+		Image bannerImage = new Image("file:src/application/images/cherryblossombackground.gif");
 		bannerImageView.setImage(bannerImage);
 		
-		Image logoImage = new Image("images/logo.png");
+		Image logoImage = new Image("file:src/application/images/logo.png");
 		logoImageView.setImage(logoImage);
 		
 		
@@ -132,14 +133,9 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
 		
 		String buttonText = sourceButton.getText();
 		//change the url here for the max volume png JA
-		Image volumeImage = new Image("images/cat1.png");
-		
-		
-	
+		Image volumeImage = new Image("file:src/application/images/maxvol.png");
 		
 		volumeImageView.setImage(volumeImage);
-		
-	
 		
 		// Volume Level: Can only be 0.0-1.0 JA
 		double volumeLevel;
@@ -149,7 +145,7 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
 			volumeLevel = 0.5; 
 			sourceButton.setText("middle");
 			//change the url here for the middle volume png JA 
-			Image newImage = new Image("images/logo.png");
+			Image newImage = new Image("file:src/application/images/midvol.png");
 			
 			volumeImageView.setImage(newImage);
 			
@@ -161,7 +157,7 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
 			setVolume(mediaPlayer, volumeLevel);
 			
 			//change the url here for the mute volume png JA
-			Image newImage = new Image("images/feed.png");
+			Image newImage = new Image("file:src/application/images/mutevol.png");
 			
 			volumeImageView.setImage(newImage);
 			
@@ -170,20 +166,9 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
 			sourceButton.setText("Max");
 			setVolume(mediaPlayer, volumeLevel);
 			
-			
 			volumeImageView.setImage(volumeImage);
 			
 		}
-		
-		
-		
-		
-	
-		
-		
-		
-		
-		
 		
 	}
 	

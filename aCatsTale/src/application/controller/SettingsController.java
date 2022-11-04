@@ -55,7 +55,7 @@ public class SettingsController implements EventHandler<ActionEvent>, Initializa
 	@Override
 	public void handle(ActionEvent event) {
 		
-		Image bannerImage = new Image("images/pinkroom.png");
+		Image bannerImage = new Image("file:src/application/images/pinkroom.png");
 		bannerImageView.setImage(bannerImage);
 		
 		//check which button was pressed...
@@ -72,9 +72,6 @@ public class SettingsController implements EventHandler<ActionEvent>, Initializa
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
-		}
-		else {
-			//else
 		}
 	}
 	

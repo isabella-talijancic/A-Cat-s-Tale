@@ -13,7 +13,7 @@
    <children>
       <ImageView fx:id="bannerImageView" fitHeight="358.0" fitWidth="600.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../images/livingroombackground.gif" />
+            <Image url="@../images/livingroombackground.gif" />
          </image></ImageView>
       <Button fx:id="cat1" layoutX="127.0" layoutY="217.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: #8395b6;" text="Luna">
          <font>
@@ -34,12 +34,12 @@
       </Label>
       <ImageView fx:id="catImageView1" fitHeight="91.0" fitWidth="115.0" layoutX="98.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/cat1.png" />
+            <Image url="@../images/cat1.png" />
          </image>
       </ImageView>
       <ImageView fx:id="catImageView2" fitHeight="91.0" fitWidth="115.0" layoutX="385.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/cat2.png" />
+            <Image url="@../images/cat2.png" />
          </image>
       </ImageView>
       <Button fx:id="cat2" layoutX="414.0" layoutY="217.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: #8395b6;" text="Maple">
@@ -56,7 +56,7 @@
       </Button>
       <ImageView fx:id="catImageView3" fitHeight="91.0" fitWidth="115.0" layoutX="98.0" layoutY="347.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/cat3.png" />
+            <Image url="@../images/cat3.png" />
          </image>
       </ImageView>
       <Button fx:id="cat3" layoutX="119.0" layoutY="438.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: #8395b6;" text="Cooper">
@@ -73,7 +73,7 @@
       </Button>
       <ImageView fx:id="catImageView4" fitHeight="91.0" fitWidth="115.0" layoutX="385.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/cat4.png" />
+            <Image url="@../images/cat4.png" />
          </image>
       </ImageView>
       <Button fx:id="cat4" layoutX="411.0" layoutY="438.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: #8395b6;" text="Ginger">

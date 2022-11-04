@@ -51,33 +51,33 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		//backgroundMusic();
-		Image bannerImage = new Image("images/strawberryroom.png");
+		Image bannerImage = new Image("file:src/application/images/strawberryroom.png");
 		bannerImageView.setImage(bannerImage);
 		
 		//check which cat was chosen
 		
 		//set up button icons & start the game!
-		Image mood = new Image("images/status.png");
+		Image mood = new Image("file:src/application/images/status.png");
 		moodImageView.setImage(mood);
 		moodButton.setGraphic(moodImageView);
 		
-		Image feed = new Image("images/feed.png");
+		Image feed = new Image("file:src/application/images/feed.png");
 		feedImageView.setImage(feed);
 		feedButton.setGraphic(feedImageView);
 		
-		Image bathroom = new Image("images/bathroom.png");
+		Image bathroom = new Image("file:src/application/images/bathroom.png");
 		bathroomImageView.setImage(bathroom);
 		bathroomButton.setGraphic(bathroomImageView);
 		
-		Image sleep = new Image("images/sleep.png");
+		Image sleep = new Image("file:src/application/images/sleep.png");
 		sleepImageView.setImage(sleep);
 		sleepButton.setGraphic(sleepImageView);
 		
-		Image medicine = new Image("images/medicine.png");
+		Image medicine = new Image("file:src/application/images/medicine.png");
 		medicineImageView.setImage(medicine);
 		medicineButton.setGraphic(medicineImageView);
 		
-		Image settings = new Image("images/settings.png");
+		Image settings = new Image("file:src/application/images/settings.png");
 		settingsImageView.setImage(settings);
 		settingsButton.setGraphic(settingsImageView);
 	}
@@ -128,9 +128,6 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 			}catch(Exception e) {
 				e.printStackTrace();
 			}
-		}
-		else {
-			//else
 		}
 	}
 	

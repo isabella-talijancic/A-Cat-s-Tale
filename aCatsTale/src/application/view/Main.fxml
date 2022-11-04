@@ -1,11 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.Bloom?>
@@ -16,15 +10,15 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #f4f3e4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
+<AnchorPane prefHeight="600.0" prefWidth="600.0" style="-fx-background-color: #f4f3e4;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.MainController">
    <children>
       <ImageView fx:id="bannerImageView" fitHeight="358.0" fitWidth="600.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../images/cherryblossombackground.gif" />
+            <Image url="@../images/cherryblossombackground.gif" />
          </image></ImageView>
       <ImageView fx:id="logoImageView" fitHeight="43.0" fitWidth="376.0" layoutX="148.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../images/logo.png" />
+            <Image url="@../images/logo.png" />
          </image>
       </ImageView>
       <Button fx:id="playButton" layoutX="271.0" layoutY="286.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" prefHeight="28.0" prefWidth="67.0" style="-fx-background-color: #deacc4;" text="Play!" textAlignment="CENTER">
@@ -60,11 +54,11 @@
          </effect>
       </Label>
      
-      <Button fx:id="volumeButton" contentDisplay="GRAPHIC_ONLY" layoutX="545.0" layoutY="14.0" mnemonicParsing="false" onAction="#volumeControl" prefHeight="24.0" prefWidth="24.0" text="Max" textAlignment="CENTER">
+      <Button fx:id="volumeButton" contentDisplay="GRAPHIC_ONLY" layoutX="545.0" layoutY="14.0" mnemonicParsing="false" onAction="#volumeControl" onMouseEntered="#buttonHovered" prefHeight="24.0" prefWidth="24.0" style="-fx-background-color: #f4f3e4;" text="Max" textAlignment="CENTER">
          <graphic>
             <ImageView fx:id="volumeImageView" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../images/maxVolume.png" />
+                  <Image url="@../images/maxvol.png" />
                </image>
             </ImageView>
          </graphic></Button>

@@ -69,7 +69,7 @@ public class RulesController implements EventHandler<ActionEvent>, Initializable
 	@Override
 	public void handle(ActionEvent event) {
 		
-		Image bannerImage = new Image("images/greenroom.png");
+		Image bannerImage = new Image("file:src/application/images/greenroom.png");
 		bannerImageView.setImage(bannerImage);
 		
 		//check which button was pressed...
