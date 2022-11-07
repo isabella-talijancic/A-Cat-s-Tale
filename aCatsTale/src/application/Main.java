@@ -13,7 +13,6 @@ import javafx.scene.image.Image;
  * @author Isabella Talijancic (juu530)
  * UTSA CS 3443 - A Cat's Tale
  * Fall 2022
- * test comment
  */
 
 public class Main extends Application {
