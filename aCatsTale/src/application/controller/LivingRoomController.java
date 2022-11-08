@@ -21,6 +21,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.stage.Stage;
 
 /**
  * SelectorController is a Java class that will need to implement the EventHandler interface,
@@ -97,25 +98,37 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 		if(sourceButton.getId().equals("moodButton")) {
 			//Happiness/mood
 			//TODO: remove later this is only for testing
-			Cat.setHunger(new Random().nextInt(10));
+			//Cat.setHunger(new Random().nextInt(10));
 			Cat.calculateHappiness();
 			System.out.println("mood button!" + Cat);
 		}
 		else if(sourceButton.getId().equals("feedButton") ) {
 			//Feed
 			System.out.println("feed button!");
+			Cat.lowerHunger();
 		}
 		else if(sourceButton.getId().equals("bathroomButton") ) {
 			//Clean/bathroom
 			System.out.println("bathroom button!");
+			Cat.dropALog();
 		}
 		else if(sourceButton.getId().equals("sleepButton") ) {
 			//Sleep
 			System.out.println("sleep button!");
+			// exit the game,
+			// TODO: save player information and switch to exit screen
+			try {
+				Stage stage = (Stage) sleepButton.getScene().getWindow();
+                stage.close();
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
 		}
 		else if(sourceButton.getId().equals("medicineButton") ) {
 			//Medicine
 			System.out.println("medicine button!");
+			Cat.treatSickness();
 		}
 		else if(sourceButton.getId().equals("settingsButton") ) {
 			// move the user to the settings view

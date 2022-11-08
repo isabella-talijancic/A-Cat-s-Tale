@@ -1,5 +1,7 @@
 package application.model;
 
+import java.util.Random;
+
 /**
  * Tamagotchi is a Java class.
  * 
@@ -30,7 +32,7 @@ public class Tamagotchi {
 		this.name = name;
 		age= 0 ;
 		happiness = 1;
-		hunger = 1;
+		hunger = 7;
 		isSick = false; 
 	}
 	
@@ -158,6 +160,37 @@ public class Tamagotchi {
 	 */
 	public void setIsSick(boolean isSick) {
 		this.isSick = isSick;
+	}
+	
+	public void lowerHunger() {
+		if(this.hunger >= 4) {
+			this.hunger -= new Random().nextInt(5);
+			System.out.println("Thanks for the big mac brother.");
+		}
+		else
+			System.out.println("* at capacity meow *");
+		if(new Random().nextInt(100)>75) {
+			this.isSick = true;
+			System.out.println("BLECK FOOD POISONING!");
+		}
+	}
+	
+	public void dropALog() {
+		if(this.hunger <=5 ) {
+			this.hunger += 3;
+			System.out.println("Thanks brother I needed to drop a log\n*grunts*");
+		}
+		else
+			System.out.println("* no need to poop meow *");
+	}
+	
+	public void treatSickness() {
+		if(new Random().nextInt(10)>4) {
+			System.out.println("Thanks I'm all better now");
+			this.isSick=false;
+		}
+		else
+			System.out.println("This shit weak brother!\n*barfs*");
 	}
 	
 //	public int getPassiveTime() {

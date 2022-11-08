@@ -123,9 +123,6 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
 				e.printStackTrace();
 			}
 		}
-		else {
-			//else
-		}
 	}
 	
 	//Event Listener for Volume Control JA
