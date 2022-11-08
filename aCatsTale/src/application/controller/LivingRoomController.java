@@ -130,6 +130,7 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 		else if(buttonText!=null && buttonText.contains("Home") ) {
 			// move the user to the Main view
 			try {
+				MainController.mediaPlayer.stop();
 				Parent root = FXMLLoader.load(getClass().getResource("../view/Main.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();

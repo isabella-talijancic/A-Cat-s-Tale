@@ -50,7 +50,11 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
     Image bannerImage, logoImage;
 	
 	@FXML
-	MediaPlayer mediaPlayer, mediaPlayerSFX;
+	static
+	MediaPlayer mediaPlayer;
+
+	@FXML
+	MediaPlayer mediaPlayerSFX;
 	
 	@FXML
 	Label namesLabel;
