@@ -162,28 +162,46 @@ public class Tamagotchi {
 		this.isSick = isSick;
 	}
 	
+	/*
+	 * you try to feed the cat, lowers hunger but there is a chance of getting sick
+	 */
 	public void lowerHunger() {
+		//determine if the cat is full or not
+
 		if(this.hunger >= 4) {
-			this.hunger -= new Random().nextInt(5);
-			System.out.println("Thanks for the big mac brother.");
+			int n = new Random().nextInt(5);
+			this.hunger -= n;
+			System.out.println("Thanks for the big mac brother.\n* eats " + n + " big mac(s) *");
+			
+			//random chance of getting sick
+			for(int i=0;i<n;i++) {
+				if(new Random().nextInt(100)>75) {
+					this.isSick = true;
+					System.out.println("BLECK FOOD POISONING!");
+					break;
+				}
+			}
 		}
 		else
 			System.out.println("* at capacity meow *");
-		if(new Random().nextInt(100)>75) {
-			this.isSick = true;
-			System.out.println("BLECK FOOD POISONING!");
-		}
 	}
 	
+	/*
+	 * cat goes to the restroom and poops out a random amount of food, raising their hunger
+	 */
 	public void dropALog() {
 		if(this.hunger <=5 ) {
-			this.hunger += 3;
-			System.out.println("Thanks brother I needed to drop a log\n*grunts*");
+			int n = new Random().nextInt(3);
+			this.hunger += n;
+			System.out.println("Thanks brother I needed to drop a log\n* grunts " + n + " times *");
 		}
 		else
 			System.out.println("* no need to poop meow *");
 	}
 	
+	/*
+	 * you give the cat medicine and hope it gets better
+	 */
 	public void treatSickness() {
 		if(new Random().nextInt(10)>4) {
 			System.out.println("Thanks I'm all better now");
@@ -221,6 +239,8 @@ public class Tamagotchi {
 		
 		if(this.happiness <= 3)
 			mood += "hateful ";
+		else if(this.happiness <= 6)
+			mood += "neutral ";
 		else if(this.happiness <= 9)
 			mood += "happy ";
 		else
