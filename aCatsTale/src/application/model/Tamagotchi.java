@@ -31,7 +31,39 @@ public class Tamagotchi {
 		age= 0 ;
 		happiness = 1;
 		hunger = 1;
-		isSick = false;
+		isSick = false; 
+	}
+	
+	/**
+	 * calculateHappiness
+	 * 
+	 * called every "time cycle" to determine the overall happiness of the cat
+	 * BAREBONE STATS: TESTING NEEDED, LOTS OF ROOM FOR EXPANSION
+	 * 	if the cat is sick: -7 happiness
+	 * 	hunger to happiness ratio (0-3:+5, 4-5:+0, 6-8:-3, 9-10:-6)
+	 *	if the cat has been played with in the last 8 hours +5 happiness
+	 *	happiness (0-3: hates you, 4-6: tolerates you, 7-9: likes you, 10: loves you)  
+	 * 
+	 */
+	public void calculateHappiness() {
+		
+		//check sickness
+		if(this.isSick)
+			this.happiness -= 7;
+		
+		//check hunger
+		if(this.hunger <= 3)
+			this.happiness += 5;
+		else if(this.hunger <= 5)
+			this.happiness += 0;
+		else if(this.hunger <= 8)
+			this.happiness -= 2;
+		else
+		{
+			this.happiness -= 7;
+			//this.isSick = true;  potential feature aka starvation
+		}
+		//TODO: factor in play time, new toys, bathroom, etc
 	}
 	
 	/**
@@ -138,11 +170,31 @@ public class Tamagotchi {
 	 * @return this.isSick()
 	 * 
 	 * in string format
-	 */
+	 *
 	public String toString()
 	{
 		return "Name: " + this.getName() + "\nAge: " + this.getAge() + "\nHappiness: " + this.getHappiness() + "\nHunger: " + this.getHunger() + "\nSick: " + this.getIsSick();
 		
-	}
+	}*/
 	
+	public String toString() {
+		String mood = "* ";
+		if(this.isSick)
+			mood += "sick ";
+		
+		if(this.happiness <= 3)
+			mood += "hateful ";
+		else if(this.happiness <= 9)
+			mood += "happy ";
+		else
+			mood += "loving ";
+		
+		if(this.hunger >= 9)
+			mood += "starving ";
+		else if(this.hunger >= 4)
+			mood += "hungry ";
+		
+		mood += "meow *";
+		return mood;
+	}
 }
