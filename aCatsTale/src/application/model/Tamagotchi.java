@@ -64,6 +64,10 @@ public class Tamagotchi {
 			//this.isSick = true;  potential feature aka starvation
 		}
 		//TODO: factor in play time, new toys, bathroom, etc
+		if(this.happiness < 0)
+			this.happiness = 0;
+		else if(this.happiness > 10)
+			this.happiness = 10;
 	}
 	
 	/**

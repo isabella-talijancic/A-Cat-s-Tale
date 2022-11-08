@@ -47,7 +47,8 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 	@FXML
 	MediaPlayer mediaPlayer, mediaPlayerSFX;
 	
-	String catChosen;
+	static String catChosen;
+	static Tamagotchi Cat;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -67,12 +68,11 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 				
 		if(buttonText!=null && buttonText.contains("Luna") ) {
 			//LUNA - START GAME
-			String catChosen = "Luna";
-			getCatChosen(catChosen);
+			catChosen = "Luna";
 			
 			// Initialize a new Tamagotchi cat using its name.
-			Tamagotchi luna = new Tamagotchi( "Luna" );
-			System.out.println(luna);
+			Cat = new Tamagotchi( catChosen );
+			System.out.println("You chose Luna!\n");
 			
 			// move the user to the LivingRoom view
 			try {
@@ -85,8 +85,12 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 		}
 		else if(buttonText!=null && buttonText.contains("Maple") ) {
 			//MAPLE - START GAME
-			String catChosen = "Maple";
-			getCatChosen(catChosen);
+			catChosen = "Maple";
+			
+			// Initialize a new Tamagotchi cat using its name.
+			Cat = new Tamagotchi( catChosen );
+			System.out.println("You chose Maple!");
+						
 			// move the user to the LivingRoom view
 			try {
 				Parent root = FXMLLoader.load(getClass().getResource("../view/LoadPage.fxml"));
@@ -98,8 +102,12 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 		}
 		else if(buttonText!=null && buttonText.contains("Cooper") ) {
 			//Cooper - START GAME
-			String catChosen = "Cooper";
-			getCatChosen(catChosen);
+			catChosen = "Cooper";
+			
+			// Initialize a new Tamagotchi cat using its name.
+			Cat = new Tamagotchi( catChosen );
+			System.out.println("You chose Cooper!");
+			
 			// move the user to the LivingRoom view
 			try {
 				Parent root = FXMLLoader.load(getClass().getResource("../view/LoadPage.fxml"));
@@ -111,8 +119,12 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 		}
 		else if(buttonText!=null && buttonText.contains("Ginger") ) {
 			//Ginger - START GAME
-			String catChosen = "Ginger";
-			getCatChosen(catChosen);
+			catChosen = "Ginger";
+			
+			// Initialize a new Tamagotchi cat using its name.
+			Cat = new Tamagotchi( catChosen );
+			System.out.println("You chose Ginger!");
+			
 			// move the user to the LivingRoom view
 			try {
 				Parent root = FXMLLoader.load(getClass().getResource("../view/LoadPage.fxml"));
@@ -122,10 +134,6 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 				e.printStackTrace();
 			}
 		}
-		else {
-			//else
-		}
-		
 	}
 	
 	//Event listener to play a sound effect for when a user hovers over a button.
@@ -147,10 +155,13 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 //        mediaPlayer = new MediaPlayer(h);
 //        mediaPlayer.play();
 //    }
-	
+	/* Not sure if we need this for anything
+	 * 
+	 *
 	public void getCatChosen( String catChosen ) {
 		this.catChosen = catChosen;
 	}
-
+	*/
+	
 
 }

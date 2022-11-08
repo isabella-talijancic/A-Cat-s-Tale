@@ -2,10 +2,12 @@ package application.controller;
 
 import java.net.URL;
 import java.nio.file.Paths;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 import application.Main;
 import application.model.Tamagotchi;
+import application.controller.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -46,10 +48,13 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 	@FXML
 	MediaPlayer mediaPlayer, mediaPlayerSFX;
 	
-	String catChosen;
+	String catChosen = SelectorController.catChosen;
+	Tamagotchi Cat = SelectorController.Cat;
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
+		
 		//backgroundMusic();
 		Image bannerImage = new Image("file:src/application/images/strawberryroom.png");
 		bannerImageView.setImage(bannerImage);
@@ -91,7 +96,10 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 		
 		if(sourceButton.getId().equals("moodButton")) {
 			//Happiness/mood
-			System.out.println("mood button!");
+			//TODO: remove later this is only for testing
+			Cat.setHunger(new Random().nextInt(10));
+			Cat.calculateHappiness();
+			System.out.println("mood button!" + Cat);
 		}
 		else if(sourceButton.getId().equals("feedButton") ) {
 			//Feed
