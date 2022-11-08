@@ -203,12 +203,18 @@ public class Tamagotchi {
 	 * you give the cat medicine and hope it gets better
 	 */
 	public void treatSickness() {
-		if(new Random().nextInt(10)>4) {
-			System.out.println("Thanks I'm all better now");
-			this.isSick=false;
+		if(this.isSick) {
+			if(new Random().nextInt(10)>4) {
+				System.out.println("Thanks I'm all better now");
+				this.isSick=false;
+			}
+			else
+				System.out.println("This shit weak brother!\n*barfs*");
 		}
-		else
-			System.out.println("This shit weak brother!\n*barfs*");
+		else {
+			System.out.println("I wasn't sick why!\n* barfs *");
+			this.isSick=true;
+		}
 	}
 	
 //	public int getPassiveTime() {
