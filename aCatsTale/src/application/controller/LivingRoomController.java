@@ -63,27 +63,27 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 		//check which cat was chosen
 		
 		//set up button icons & start the game!
-		Image mood = new Image("file:src/application/images/status.png");
+		Image mood = new Image("file:src/application/images/transparent_status.png");
 		moodImageView.setImage(mood);
 		moodButton.setGraphic(moodImageView);
 		
-		Image feed = new Image("file:src/application/images/feed.png");
+		Image feed = new Image("file:src/application/images/transparent_feed.png");
 		feedImageView.setImage(feed);
 		feedButton.setGraphic(feedImageView);
 		
-		Image bathroom = new Image("file:src/application/images/bathroom.png");
+		Image bathroom = new Image("file:src/application/images/transparent_bathroom.png");
 		bathroomImageView.setImage(bathroom);
 		bathroomButton.setGraphic(bathroomImageView);
 		
-		Image sleep = new Image("file:src/application/images/sleep.png");
+		Image sleep = new Image("file:src/application/images/transparent_sleepdoor.png");
 		sleepImageView.setImage(sleep);
 		sleepButton.setGraphic(sleepImageView);
 		
-		Image medicine = new Image("file:src/application/images/medicine.png");
+		Image medicine = new Image("file:src/application/images/transparent_medicine.png");
 		medicineImageView.setImage(medicine);
 		medicineButton.setGraphic(medicineImageView);
 		
-		Image settings = new Image("file:src/application/images/settings.png");
+		Image settings = new Image("file:src/application/images/transparent_settings.png");
 		settingsImageView.setImage(settings);
 		settingsButton.setGraphic(settingsImageView);
 	}
