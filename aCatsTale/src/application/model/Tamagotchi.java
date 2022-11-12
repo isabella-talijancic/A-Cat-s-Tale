@@ -169,7 +169,7 @@ public class Tamagotchi {
 		//determine if the cat is full or not
 
 		if(this.hunger >= 4) {
-			int n = new Random().nextInt(5);
+			int n = new Random().nextInt(5) + 1;
 			this.hunger -= n;
 			System.out.println("Thanks for the big mac brother.\n* eats " + n + " big mac(s) *");
 			
@@ -191,7 +191,7 @@ public class Tamagotchi {
 	 */
 	public void dropALog() {
 		if(this.hunger <=5 ) {
-			int n = new Random().nextInt(3);
+			int n = new Random().nextInt(3) + 1;
 			this.hunger += n;
 			System.out.println("Thanks brother I needed to drop a log\n* grunts " + n + " times *");
 		}

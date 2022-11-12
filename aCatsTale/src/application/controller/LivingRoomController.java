@@ -4,6 +4,7 @@ import java.net.URL;
 import java.nio.file.Paths;
 import java.util.Random;
 import java.util.ResourceBundle;
+import java.util.concurrent.TimeUnit;
 
 import application.Main;
 import application.model.Tamagotchi;
@@ -41,10 +42,10 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 	Label textOutput, welcome;
 	
 	@FXML
-    ImageView bannerImageView, catImageView1, catImageView2, catImageView3, catImageView4, moodImageView, feedImageView, bathroomImageView, sleepImageView, medicineImageView, settingsImageView;
+    ImageView catPlayerView, bannerImageView, catImageView1, catImageView2, catImageView3, catImageView4, moodImageView, feedImageView, bathroomImageView, sleepImageView, medicineImageView, settingsImageView;
 	
 	@FXML
-    Image bannerImage, catImage1, catImage2, catImage3, catImage4, mood, feed, bathroom, sleep, medicine, settings;
+    Image catPlayer, bannerImage, catImage1, catImage2, catImage3, catImage4, mood, feed, bathroom, sleep, medicine, settings;
 
 	@FXML
 	MediaPlayer mediaPlayer, mediaPlayerSFX;
@@ -59,8 +60,6 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 		//backgroundMusic();
 		Image bannerImage = new Image("file:src/application/images/strawberryroom.png");
 		bannerImageView.setImage(bannerImage);
-		
-		//check which cat was chosen
 		
 		//set up button icons & start the game!
 		Image mood = new Image("file:src/application/images/transparent_status.png");
@@ -86,6 +85,12 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 		Image settings = new Image("file:src/application/images/transparent_settings.png");
 		settingsImageView.setImage(settings);
 		settingsButton.setGraphic(settingsImageView);
+		
+		//TODO: Ginger and Cooper gif, Maple is not the right color atm
+		if(catChosen == "Ginger"||catChosen == "Cooper")
+			catChosen = "Luna";
+		Image catPlayer = new Image("file:src/application/images/"+catChosen+".gif");
+		catPlayerView.setImage(catPlayer);
 	}
 
 	@Override
@@ -97,18 +102,19 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 		
 		if(sourceButton.getId().equals("moodButton")) {
 			//Happiness/mood
-			//TODO: remove later this is only for testing
-			//Cat.setHunger(new Random().nextInt(10));
+			//TODO: testing purposes needs to be updated
 			Cat.calculateHappiness();
 			System.out.println("mood button!" + Cat);
 		}
 		else if(sourceButton.getId().equals("feedButton") ) {
 			//Feed
+			//TODO: testing purposes needs to be updated
 			System.out.println("feed button!");
 			Cat.lowerHunger();
 		}
 		else if(sourceButton.getId().equals("bathroomButton") ) {
 			//Clean/bathroom
+			//TODO: testing purposes needs to be updated
 			System.out.println("bathroom button!");
 			Cat.dropALog();
 		}
@@ -127,6 +133,7 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 		}
 		else if(sourceButton.getId().equals("medicineButton") ) {
 			//Medicine
+			//TODO: testing purposes needs to be updated
 			System.out.println("medicine button!");
 			Cat.treatSickness();
 		}

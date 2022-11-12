@@ -72,6 +72,11 @@
       <Button fx:id="medicineButton" layoutX="425.0" layoutY="537.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: transparent;" />
       <ImageView fx:id="medicineImageView" fitHeight="40.0" fitWidth="40.0" layoutX="40.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true" />
       <Button fx:id="settingsButton" layoutX="530.0" layoutY="537.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: transparent;" />
-      <ImageView fx:id="settingsImageView" fitHeight="40.0" fitWidth="40.0" layoutX="50.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="settingsImageView" fitHeight="40.0" fitWidth="40.0" layoutX="50.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true" /> 
+      <ImageView fx:id="catPlayerView" fitHeight="150.0" fitWidth="582.0" layoutX="11.0" layoutY="393.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/gray%20cat%20walking%20across%20screen%20transparent.gif" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
