@@ -42,10 +42,10 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 	Label textOutput, welcome;
 	
 	@FXML
-    ImageView catPlayerView, bannerImageView, catImageView1, catImageView2, catImageView3, catImageView4, moodImageView, feedImageView, bathroomImageView, sleepImageView, medicineImageView, settingsImageView;
+    ImageView catPlayerView, bannerImageView, catImageView1, catImageView2, catImageView3, catImageView4, moodImageView, feedImageView, bathroomImageView, sleepImageView, medicineImageView, settingsImageView, homebackView;
 	
 	@FXML
-    Image catPlayer, bannerImage, catImage1, catImage2, catImage3, catImage4, mood, feed, bathroom, sleep, medicine, settings;
+    Image catPlayer, bannerImage, catImage1, catImage2, catImage3, catImage4, mood, feed, bathroom, sleep, medicine, settings, homeback;
 
 	@FXML
 	MediaPlayer mediaPlayer, mediaPlayerSFX;
@@ -55,6 +55,11 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 	
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
+		
+		//home button changed to have icon sleepdoor png image that was originally sleep
+		Image homeback = new Image("file:src/application/images/transparent_sleepdoor.png");
+		homebackView.setImage(homeback);
+		home.setGraphic(homebackView);
 		
 		
 		//backgroundMusic();
@@ -74,7 +79,7 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 		bathroomImageView.setImage(bathroom);
 		bathroomButton.setGraphic(bathroomImageView);
 		
-		Image sleep = new Image("file:src/application/images/transparent_sleepdoor.png");
+		Image sleep = new Image("file:src/application/images/fixed fatter zs.png");
 		sleepImageView.setImage(sleep);
 		sleepButton.setGraphic(sleepImageView);
 		
