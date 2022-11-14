@@ -32,7 +32,7 @@ import javafx.stage.Stage;
  * UTSA CS 3443 - A Cat's Tale
  * Fall 2022
  * 
- *pls ignore this line im just trying to figure out how to commit under school wguzc username
+ *
  */
 
 public class LivingRoomController implements EventHandler<ActionEvent>, Initializable {
@@ -93,9 +93,10 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 		settingsImageView.setImage(settings);
 		settingsButton.setGraphic(settingsImageView);
 		
+		//all cats added now
 		//TODO: Pumpkin and Snowball gif, Maple is not the right color atm
-		if(catChosen == "Pumpkin"||catChosen == "Snowball")
-			catChosen = "Luna";
+//		if(catChosen == "Pumpkin"||catChosen == "Snowball")
+//			catChosen = "Luna";
 		Image catPlayer = new Image("file:src/application/images/"+catChosen+".gif");
 		catPlayerView.setImage(catPlayer);
 	}
