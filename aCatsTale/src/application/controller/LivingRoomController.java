@@ -31,6 +31,8 @@ import javafx.stage.Stage;
  * @author Isabella Talijancic (juu530)
  * UTSA CS 3443 - A Cat's Tale
  * Fall 2022
+ * 
+ *pls ignore this line im just trying to figure out how to commit under school wguzc username
  */
 
 public class LivingRoomController implements EventHandler<ActionEvent>, Initializable {
