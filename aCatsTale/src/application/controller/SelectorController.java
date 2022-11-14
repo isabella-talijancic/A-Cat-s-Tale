@@ -100,13 +100,13 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 				e.printStackTrace();
 			}
 		}
-		else if(buttonText!=null && buttonText.contains("Cooper") ) {
-			//Cooper - START GAME
-			catChosen = "Cooper";
+		else if(buttonText!=null && buttonText.contains("Snowball") ) {
+			//Snowball - START GAME
+			catChosen = "Snowball";
 			
 			// Initialize a new Tamagotchi cat using its name.
 			Cat = new Tamagotchi( catChosen );
-			System.out.println("You chose Cooper!");
+			System.out.println("You chose Snowball!");
 			
 			// move the user to the LivingRoom view
 			try {
@@ -117,13 +117,13 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 				e.printStackTrace();
 			}
 		}
-		else if(buttonText!=null && buttonText.contains("Ginger") ) {
-			//Ginger - START GAME
-			catChosen = "Ginger";
+		else if(buttonText!=null && buttonText.contains("Pumpkin") ) {
+			//Pumpkin - START GAME
+			catChosen = "Pumpkin";
 			
 			// Initialize a new Tamagotchi cat using its name.
 			Cat = new Tamagotchi( catChosen );
-			System.out.println("You chose Ginger!");
+			System.out.println("You chose Pumpkin!");
 			
 			// move the user to the LivingRoom view
 			try {

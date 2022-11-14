@@ -40,12 +40,12 @@
       </Label>
       <ImageView fx:id="catImageView1" fitHeight="91.0" fitWidth="115.0" layoutX="98.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/cat1.png" />
+            <Image url="@../images/luna1.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="catImageView2" fitHeight="91.0" fitWidth="115.0" layoutX="385.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="catImageView2" fitHeight="86.0" fitWidth="124.0" layoutX="385.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/cat2.png" />
+            <Image url="@../images/maple1.png" />
          </image>
       </ImageView>
       <Button fx:id="cat2" layoutX="414.0" layoutY="217.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: #8395b6;" text="Maple">
@@ -65,7 +65,7 @@
             <Image url="@../images/cat3.png" />
          </image>
       </ImageView>
-      <Button fx:id="cat3" layoutX="119.0" layoutY="438.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: #8395b6;" text="Cooper">
+      <Button fx:id="cat3" layoutX="119.0" layoutY="438.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: #8395b6;" text="Snowball">
          <font>
             <Font name="HP Simplified Jpan Regular" size="14.0" />
          </font>
@@ -82,7 +82,7 @@
             <Image url="@../images/cat4.png" />
          </image>
       </ImageView>
-      <Button fx:id="cat4" layoutX="411.0" layoutY="438.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: #8395b6;" text="Ginger">
+      <Button fx:id="cat4" layoutX="411.0" layoutY="438.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: #8395b6;" text="Pumpkin">
          <font>
             <Font name="HP Simplified Jpan Regular" size="14.0" />
          </font>

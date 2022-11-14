@@ -91,8 +91,8 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 		settingsImageView.setImage(settings);
 		settingsButton.setGraphic(settingsImageView);
 		
-		//TODO: Ginger and Cooper gif, Maple is not the right color atm
-		if(catChosen == "Ginger"||catChosen == "Cooper")
+		//TODO: Pumpkin and Snowball gif, Maple is not the right color atm
+		if(catChosen == "Pumpkin"||catChosen == "Snowball")
 			catChosen = "Luna";
 		Image catPlayer = new Image("file:src/application/images/"+catChosen+".gif");
 		catPlayerView.setImage(catPlayer);
@@ -152,6 +152,8 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 				e.printStackTrace();
 			}
 		}
+		
+		//home button does have text home just very tiny font
 		else if(buttonText!=null && buttonText.contains("Home") ) {
 			// move the user to the Main view
 			try {

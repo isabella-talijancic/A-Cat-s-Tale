@@ -34,9 +34,9 @@
             <Image url="@../../images/cat3.png" />
          </image>
       </ImageView>
-      <Button fx:id="home" layoutX="530.0" layoutY="10.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" style="-fx-background-color: transparent;">
+      <Button fx:id="home" layoutX="530.0" layoutY="10.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" prefHeight="25.0" prefWidth="66.0" style="-fx-background-color: transparent;" text="Home">
          <font>
-            <Font name="HP Simplified Jpan Regular" size="14.0" />
+            <Font size="1.0" />
          </font>
          <effect>
             <Glow>
