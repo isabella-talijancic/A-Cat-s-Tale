@@ -73,6 +73,18 @@ public class SettingsController implements EventHandler<ActionEvent>, Initializa
 				e.printStackTrace();
 			}
 		}
+		
+		else if(buttonText!=null && buttonText.contains("Strawberry Room") ) {
+			// move the user back to the main view
+			try {
+				Parent root = FXMLLoader.load(getClass().getResource("../view/LivingRoom.fxml"));
+				Main.stage.setScene( new Scene(root, 600, 600) );
+				Main.stage.show();
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
 	}
 	
 	//Event listener to play a sound effect for when a user hovers over a button.
