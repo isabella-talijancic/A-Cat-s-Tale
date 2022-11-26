@@ -69,7 +69,7 @@ public class MainController implements EventHandler<ActionEvent>, Initializable{
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
 		backgroundMusic();
-		animateText(namesLabel, "Made Possible by: Isabella Talijancic, Jake Alvarez,\n"
+		animateText(namesLabel, "Made Possible by 4☆Town: Isabella Talijancic, Jake Alvarez,\n"
 				+ "Wendy Guzman-Castro, Robert Sepulveda, and Christine Park");
 		
 	}
