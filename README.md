@@ -1,8 +1,8 @@
-# A Cat's Tale
+**# A Cat's Tale**
 
-Brought to you by 4☆Town: Isabella Talijancic, Wendy Guzman-Castro, Jake Alvarez, Robert Sepulveda, and Christine Park.
+Brought to you by **4☆Town**: Isabella Talijancic, Wendy Guzman-Castro, Jake Alvarez, Robert Sepulveda, and Christine Park.
 
-Game Description:
+**Game Description:**
 
 Meow there!
 
@@ -18,5 +18,5 @@ Feed, clean, and bond with your new best friend! By training and taking good car
 
 Are you feline up to it?
 
-Known bugs:
+**Known bugs:**
 TBD
