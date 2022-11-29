@@ -72,7 +72,6 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 			
 			// Initialize a new Tamagotchi cat using its name.
 			Cat = new Tamagotchi( catChosen );
-			System.out.println("You chose Luna!\n");
 			
 			// move the user to the LivingRoom view
 			try {
@@ -89,7 +88,6 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 			
 			// Initialize a new Tamagotchi cat using its name.
 			Cat = new Tamagotchi( catChosen );
-			System.out.println("You chose Maple!");
 						
 			// move the user to the LivingRoom view
 			try {
@@ -106,7 +104,6 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 			
 			// Initialize a new Tamagotchi cat using its name.
 			Cat = new Tamagotchi( catChosen );
-			System.out.println("You chose Snowball!");
 			
 			// move the user to the LivingRoom view
 			try {
@@ -123,7 +120,6 @@ public class SelectorController implements EventHandler<ActionEvent>, Initializa
 			
 			// Initialize a new Tamagotchi cat using its name.
 			Cat = new Tamagotchi( catChosen );
-			System.out.println("You chose Pumpkin!");
 			
 			// move the user to the LivingRoom view
 			try {

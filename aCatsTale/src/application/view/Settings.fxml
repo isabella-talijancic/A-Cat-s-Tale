@@ -65,7 +65,7 @@
             <DropShadow />
          </effect>
       </Label>
-      <Button alignment="CENTER" layoutX="121.0" layoutY="280.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" text="Keroppi Room" textFill="#a4a960">
+      <Button fx:id="keroRoom" alignment="CENTER" layoutX="121.0" layoutY="280.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" prefHeight="26.0" prefWidth="113.0" text="Keroppi Room" textFill="#a4a960">
          <font>
             <Font name="HP Simplified Jpan Regular" size="12.0" />
          </font>
@@ -73,7 +73,7 @@
             <DropShadow />
          </effect>
       </Button>
-      <Button alignment="CENTER" layoutX="348.0" layoutY="278.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="113.0" text="Cinnamoroll Room" textFill="#247aae">
+      <Button fx:id="cinnaRoom" alignment="CENTER" layoutX="348.0" layoutY="278.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" prefHeight="28.0" prefWidth="113.0" text="Cinnamoroll Room" textFill="#247aae">
          <font>
             <Font name="HP Simplified Jpan Regular" size="12.0" />
          </font>
@@ -81,7 +81,7 @@
             <DropShadow />
          </effect>
       </Button>
-      <Button alignment="CENTER" layoutX="120.0" layoutY="485.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="113.0" text="Greenery Room" textFill="#3e652e">
+      <Button fx:id="greenRoom" alignment="CENTER" layoutX="120.0" layoutY="485.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" prefHeight="26.0" prefWidth="113.0" text="Greenery Room" textFill="#3e652e">
          <font>
             <Font name="HP Simplified Jpan Regular" size="12.0" />
          </font>
@@ -89,7 +89,7 @@
             <DropShadow />
          </effect>
       </Button>
-      <Button fx:id="strawberryButton" alignment="CENTER" layoutX="348.0" layoutY="485.0" mnemonicParsing="false" onAction="#handle" prefHeight="26.0" prefWidth="113.0" text="Strawberry Room" textFill="#b34444">
+      <Button fx:id="strawberryRoom" alignment="CENTER" layoutX="348.0" layoutY="485.0" mnemonicParsing="false" onAction="#handle" onMouseEntered="#buttonHovered" prefHeight="26.0" prefWidth="113.0" text="Strawberry Room" textFill="#b34444">
          <font>
             <Font name="HP Simplified Jpan Regular" size="12.0" />
          </font>

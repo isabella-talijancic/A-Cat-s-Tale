@@ -8,7 +8,6 @@ import java.nio.file.Paths;
 import java.util.ResourceBundle;
 
 import application.Main;
-import application.model.Tamagotchi;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -32,7 +31,7 @@ import javafx.scene.media.MediaPlayer;
 public class SettingsController implements EventHandler<ActionEvent>, Initializable {
 	
 	@FXML
-	Button backButton;
+	Button backButton, keroRoom, cinnaRoom, greenRoom, strawberryRoom;
 	
 	@FXML
     ImageView bannerImageView, logoImageView;
@@ -78,6 +77,42 @@ public class SettingsController implements EventHandler<ActionEvent>, Initializa
 			// move the user back to the main view
 			try {
 				Parent root = FXMLLoader.load(getClass().getResource("../view/LivingRoom.fxml"));
+				Main.stage.setScene( new Scene(root, 600, 600) );
+				Main.stage.show();
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		else if(buttonText!=null && buttonText.contains("Keroppi Room") ) {
+			// move the user back to the main view
+			try {
+				Parent root = FXMLLoader.load(getClass().getResource("../view/KeroRoom.fxml"));
+				Main.stage.setScene( new Scene(root, 600, 600) );
+				Main.stage.show();
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		else if(buttonText!=null && buttonText.contains("Cinnamoroll Room") ) {
+			// move the user back to the main view
+			try {
+				Parent root = FXMLLoader.load(getClass().getResource("../view/CinnaRoom.fxml"));
+				Main.stage.setScene( new Scene(root, 600, 600) );
+				Main.stage.show();
+				
+			}catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		else if(buttonText!=null && buttonText.contains("Greenery Room") ) {
+			// move the user back to the main view
+			try {
+				Parent root = FXMLLoader.load(getClass().getResource("../view/GreenRoom.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
 				
