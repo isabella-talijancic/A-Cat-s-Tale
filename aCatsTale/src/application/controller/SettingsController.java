@@ -88,7 +88,7 @@ public class SettingsController implements EventHandler<ActionEvent>, Initializa
 		else if(buttonText!=null && buttonText.contains("Keroppi Room") ) {
 			// move the user back to the main view
 			try {
-				Parent root = FXMLLoader.load(getClass().getResource("../view/KeroRoom.fxml"));
+				Parent root = FXMLLoader.load(getClass().getResource("../view/keroRoom.fxml"));
 				Main.stage.setScene( new Scene(root, 600, 600) );
 				Main.stage.show();
 				

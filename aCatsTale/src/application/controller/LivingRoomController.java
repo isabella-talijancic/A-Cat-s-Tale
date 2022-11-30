@@ -65,8 +65,8 @@ public class LivingRoomController implements EventHandler<ActionEvent>, Initiali
 		
 		
 		//backgroundMusic();
-		Image bannerImage = new Image("file:src/application/images/strawberryroom.png");
-		bannerImageView.setImage(bannerImage);
+//		Image bannerImage = new Image("file:src/application/images/strawberryroom.png");
+//		bannerImageView.setImage(bannerImage);
 		
 		//set up button icons & start the game!
 		Image mood = new Image("file:src/application/images/transparent_status.png");
