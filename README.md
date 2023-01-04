@@ -19,4 +19,6 @@ Feed, clean, and bond with your new best friend! By training and taking good car
 Are you feline up to it?
 
 **Known bugs:**
-TBD
+We have two known bugs. 
+1. Our first known bug is not getting is that when you press on a eat/medicine/bath/mood button do not the correspoding gifs do not play. We ran out of time to figure out how to get them to show up when a user clickes the corresponding button to the gif.
+2. Our second known bug corresponds with the first one (technically its not a bug since we did it for the meantime, but it might suprise users when they click on the sleep button the app will close). It is when the users clicks on the sleep button it closes the app. Our initial plan was to have the sleep emoji play and then have the app close, but since we couldn't get the gifs to play when the user clicks on the sleep/eat/medicine/bath/mood buttons it will just close the app when the user clicks the sleep button. 
